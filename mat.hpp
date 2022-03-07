@@ -5,7 +5,10 @@
 #ifndef UNTITLED19_MAT_HPP
 #define UNTITLED19_MAT_HPP
 
-namespace ariel{
-    std::string mat(int column, int row, char a, char b);
+#include <string>
+#include <iostream>
+using namespace std;
+namespace ariel {
+    string mat(int column, int row, char a, char b);
 }
 #endif //UNTITLED19_MAT_HPP
