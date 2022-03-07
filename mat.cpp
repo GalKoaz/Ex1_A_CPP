@@ -18,7 +18,7 @@ string ariel::mat(int column, int row, char a, char b) {
     if (a == b) {
         throw std::invalid_argument("Mat is always has two different chars");
     }
-    int s_row = 0;
+    /*int s_row = 0;
     int s_col = 0;
     int save_row = row;
     int save_col = column;
@@ -55,6 +55,18 @@ string ariel::mat(int column, int row, char a, char b) {
         if (i + 1 < save_row) {
             matrix.push_back('\n');
         }
+    }
+    return matrix;*/
+    string matrix;
+    int iterator;
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < column; j++) {
+            iterator = min(min(i, j), min(row - 1 - i, column - 1 - j));
+            iterator %= 2;
+            if (iterator == 0) { matrix += a; }
+            else { matrix += b; }
+        }
+        if (i + 1 < row) { matrix += '\n';}
     }
     return matrix;
 }
