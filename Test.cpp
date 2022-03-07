@@ -203,10 +203,10 @@ TEST_CASE ("Bad input") {
 }
 
 TEST_CASE ("Same Char") {
-            CHECK_THROWS(mat(10, 5, '$', '$'));
-            CHECK_THROWS(mat(9, 9, '-', '-'));
-            CHECK_THROWS(mat(-1, 0, '%', '%'));
-            CHECK_THROWS(mat(-1, -1, '@', '@'));
+            CHECK_THROWS(mat(11, 5, '$', '$'));
+            CHECK_THROWS(mat(13, 9, '-', '-'));
+            CHECK_THROWS(mat(5, 5, '%', '%'));
+            CHECK_THROWS(mat(9, 9, '@', '@'));
 }
 
 TEST_CASE ("Negative value") {
