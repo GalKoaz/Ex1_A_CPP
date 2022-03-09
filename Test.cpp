@@ -203,10 +203,10 @@ TEST_CASE ("Bad input") {
 }
 
 TEST_CASE ("Same Char") {
-            CHECK_THROWS(mat(11, 5, '$', '$'));
-            CHECK_THROWS(mat(13, 9, '-', '-'));
-            CHECK_THROWS(mat(5, 5, '%', '%'));
-            CHECK_THROWS(mat(9, 9, '@', '@'));
+            CHECK_NOTHROW(mat(11, 5, '$', '$'));
+            CHECK_NOTHROW(mat(13, 9, '-', '-'));
+            CHECK_NOTHROW(mat(5, 5, '%', '%'));
+            CHECK_NOTHROW(mat(9, 9, '@', '@'));
 }
 
 TEST_CASE ("Negative value") {
@@ -226,10 +226,10 @@ TEST_CASE ("even value") {
 }
 
 TEST_CASE ("spaces") {
-            CHECK_THROWS(mat(9, 5, ' ', '%'));
-            CHECK_THROWS(mat(5, 5, '\n', '%'));
-            CHECK_THROWS(mat(3, 3, '\r', '%'));
-            CHECK_THROWS(mat(3, 1, '\t', '%'));
-            CHECK_THROWS(mat(1, 3, '$', ' '));
+            CHECK_NOTHROW(mat(9, 5, ' ', '%'));
+            CHECK_NOTHROW(mat(5, 5, '\n', '%'));
+            CHECK_NOTHROW(mat(3, 3, '\r', '%'));
+            CHECK_NOTHROW(mat(3, 1, '\t', '%'));
+            CHECK_NOTHROW(mat(1, 3, '$', ' '));
 }
 
